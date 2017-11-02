@@ -9,4 +9,7 @@
 			<value>this is Spring Project!</value>
 		</property>
 	</bean>
+	
+	<bean id="enWay" class="com.chemyoo.pub.interfaces.impl.EnglishWay" scope="singleton"/>
+	<bean id="chWay" class="com.chemyoo.pub.interfaces.impl.ChineseWay" scope="prototype"/>
 </beans>
