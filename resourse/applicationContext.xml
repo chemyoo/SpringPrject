@@ -10,6 +10,14 @@
 		</property>
 	</bean>
 	
-	<bean id="enWay" class="com.chemyoo.pub.interfaces.impl.EnglishWay" scope="singleton"/>
+	<bean id="enWay" class="com.chemyoo.pub.interfaces.impl.EnglishWay" scope="singleton">
+		<constructor-arg index="0">
+			<value> helloMessage</value>
+		</constructor-arg>
+		<constructor-arg index="1" ref="date"/>
+		<property name="date"><ref bean="date"/></property><!-- setter注入 -->
+	</bean>
 	<bean id="chWay" class="com.chemyoo.pub.interfaces.impl.ChineseWay" scope="prototype"/>
+	
+	<bean id="date" class="java.util.Date"></bean>
 </beans>
