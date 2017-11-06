@@ -22,6 +22,8 @@ import org.springframework.core.io.UrlResource;
 import com.chemyoo.beans.ChemyooBean;
 import com.chemyoo.beans.HelloBean;
 import com.chemyoo.pub.interfaces.Hello;
+import com.chemyoo.pub.interfaces.impl.ImplInitializingBean;
+import com.chemyoo.pub.interfaces.impl.InitMethod;
 
 public class Test {
 
@@ -75,6 +77,13 @@ public class Test {
 		    Logger.getRootLogger().info(hello1.doSalutation());
 		    hello1 = (Hello) appContext.getBean("chWay");
 		    Logger.getRootLogger().info(hello1.doSalutation());
+		    
+		    InitMethod initMethod = (InitMethod) appContext.getBean("InitMethod");
+		    Logger.getRootLogger().error(initMethod.doSalutation());
+		    
+		    ImplInitializingBean initializingBean = (ImplInitializingBean) appContext.getBean("ImplInitializingBean");
+		    Logger.getRootLogger().error(initializingBean.doSalutation());
+		    
 		    
 
 	}

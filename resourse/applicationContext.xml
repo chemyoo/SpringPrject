@@ -20,4 +20,9 @@
 	<bean id="chWay" class="com.chemyoo.pub.interfaces.impl.ChineseWay" scope="prototype"/>
 	
 	<bean id="date" class="java.util.Date"></bean>
+	
+	<bean id="InitMethod" class="com.chemyoo.pub.interfaces.impl.InitMethod" init-method="init"></bean>
+	
+	<bean id="ImplInitializingBean" class="com.chemyoo.pub.interfaces.impl.ImplInitializingBean"/>
+	
 </beans>
