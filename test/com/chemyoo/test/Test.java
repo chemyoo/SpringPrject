@@ -80,7 +80,7 @@ public class Test {
 		    
 		    InitMethod initMethod = (InitMethod) appContext.getBean("InitMethod");
 		    Logger.getRootLogger().error(initMethod.doSalutation());
-		    
+		    //不推荐的用法，耦合到Spring中去了
 		    ImplInitializingBean initializingBean = (ImplInitializingBean) appContext.getBean("ImplInitializingBean");
 		    Logger.getRootLogger().error(initializingBean.doSalutation());
 		    
