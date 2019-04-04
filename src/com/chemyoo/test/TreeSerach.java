@@ -14,7 +14,6 @@ public class TreeSerach {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO 自动生成的方法存根
 		toTree();
 		  while (!nodeStack.isEmpty()) {
 			  Map<String, Object> popnode = nodeStack.pop();
