@@ -219,6 +219,7 @@ public class SmbFileUtils {
 	
 	public static void main(String[] args) {
 		SmbFileUtils.getSharedFileList();
+		SmbFileUtils.downloadFileToFolder(REMOTE_URL, "JavaApplication/", "build.xml", "D:");
 	}
 	
 }
